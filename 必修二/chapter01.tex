@@ -1,0 +1,280 @@
+\documentclass[titlepage]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+
+\title{第一章~三角函数}
+\author{dovego}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\section{周期变化}
+
+一般地, 对于函数 $y = f(x), x \in D$, 若存在一个非零实数 $T$, 使得对 $\forall x \in D$, 都有 $x + T \in D$, 且满足
+\[
+f(x + T) = f(x)
+\]
+则称函数 $y = f(x)$ 为\textbf{周期函数}, 称 $T$ 为周期函数 $f(x)$ 的周期. 
+
+周期函数的周期不唯一. 若在 $f(x)$ 的所有周期中存在一个最小正数, 则称这个最小正数为函数 $y = f(x)$ 的\textbf{最小正周期}. 
+
+
+\section{任意角}
+
+\subsection{角的概念推广}
+
+始边, 终边, 正角, 负角, 零角. 将角的概念推广到了任意角.
+
+\subsection{象限角及其表示}
+
+在直角坐标系中, 将角的顶点与原点重合, 始边与 $x$ 轴的非负半轴重合, 则角的终边在第几象限, 就说这个角是第几象限角.
+若角的终边与坐标轴重合, 那么这个角就不属于任何象限.
+
+一般地, 给定一个角 $\alpha$, 所有与角 $\alpha$ 终边相同的角, 连同角 $\alpha$ 在内, 可以构成一个集合
+\[
+S = \{\beta | \beta = \alpha + k \cdot 360^\circ, k\in \mathbf{Z}\}.
+\]
+
+
+\section{弧度制}
+
+\subsection{弧度概念}
+
+单位圆: 半径为\textbf{单位长度1}的圆.
+
+设角 $\alpha = n^\circ$, 由初中所学可知弧长 $l = \dfrac{n\pi r}{180^\circ}$, 可得
+\[
+\frac{l}{r} = n\frac{\pi}{180^\circ}.
+\]
+
+由此可见, $\dfrac{l}{r}$ 的值只与角 $\alpha$ 的大小有关. 
+
+在单位圆中, 把长度为 1 的弧所对的圆心角称为 1 \textbf{弧度}的角. 其单位用符号 rad表示, 读作弧度(常省略).
+这种以弧度为单位来度量角的方法, 叫做\textbf{弧度制}.
+
+正角的弧度数为正数, 负角的弧度数为负数.
+
+\subsection{弧度与角度的换算}
+
+\begin{align*}
+1^\circ = \dfrac{\pi}{180} \mathrm{rad} \approx 0.01745~\mathrm{rad}, \\
+1~\mathrm{rad} = \dfrac{180}{\pi}^\circ \approx 57^\circ18^\prime.
+\end{align*}
+
+特殊角度的换算, 如 $90^\circ = \dfrac{\pi}{2}$ 等.
+
+
+\section{正弦函数和余弦函数的概念及其性质}
+
+\subsection{单位圆与任意角的正弦函数、余弦函数定义}
+
+在单位圆中, 设角 $\alpha$ 的终边 $OP$ 与单位圆交于点 $P(u, v)$, 则 $P$ 的横纵坐标都是唯一确定的, 二者都是角 $\alpha$ 的函数.
+于是在弧度意义下, 定义角 $\alpha(\alpha \in \mathbf{R})$ 的\textbf{正弦函数} 为 $u = \sin \alpha$, 余弦函数为 $v = \cos \alpha$.
+
+由三角形相似可知, 对于角 $\alpha$ 终边上的任意一点 $Q(x, y)$, 有
+\[
+\sin \alpha = \dfrac{y}{\sqrt{x^2 + y^2}}, \cos \alpha = \dfrac{x}{\sqrt{x^2 + y^2}}.
+\]
+
+\subsection{单位圆与正弦函数、余弦函数的基本性质}
+
+\subsubsection{定义域}
+正弦函数, 余弦函数的定义域均为 $\mathbf{R}$.
+
+\subsubsection{最值和值域}
+当 $\alpha = 2k\pi + \dfrac{\pi}{2}, k\in \mathbf{Z}$ 时, $v = \sin \alpha$ 取最大值 1;
+当 $\alpha = 2k\pi - \dfrac{\pi}{2}, k\in \mathbf{Z}$ 时, $v = \sin \alpha$ 取最小值 -1.
+
+当 $\alpha = 2k\pi, k\in \mathbf{Z}$ 时, $u = \cos \alpha$ 取最大值 1;
+当 $\alpha = 2k\pi + \pi, k\in \mathbf{Z}$ 时, $u = \cos \alpha$ 取最小值 -1.
+它们的值域均为 $[-1, 1]$.
+
+\subsubsection{周期性}
+它们的最小正周期均为 $2\pi$.
+
+\subsubsection{单调性}
+结合周期性可知, 正弦函数 $v = \sin \alpha$ 在区间 $(-\dfrac{\pi}{2} + 2k\pi, \dfrac{\pi}{2} + 2k\pi), k\in \mathbf{Z}$ 上单调递增, 
+在区间 $(\dfrac{\pi}{2} + 2k\pi, \dfrac{3\pi}{2} + 2k\pi), k\in \mathbf{Z}$ 上单调递减.
+
+余弦函数 $u = \cos \alpha$ 在区间 $(2k\pi, \pi + 2k\pi)$ 上单调递减,
+在区间 $(-\pi + 2k\pi, 2k\pi)$ 上单调递增.
+
+\subsubsection{正弦函数值和余弦函数值的符号}
+与点 $P(u, v)$ 所在的象限(坐标轴)有关.
+
+\subsection{诱导公式与对称}
+
+\subsubsection{关于 $x$ 轴对称}
+$\sin(- \alpha) = - \sin \alpha$, 所以 $v = \sin \alpha$ 是奇函数.
+$\cos(- \alpha) = \cos \alpha$, 所以 $u = \cos \alpha$ 是偶函数.
+
+\subsubsection{关于原点中心对称}
+函数值相反.
+\begin{align*}
+    \sin(\alpha + \pi) &= - \sin \alpha, & \sin(\alpha - \pi) &= - \sin \alpha, \\
+    \cos(\alpha + \pi) &= - \cos \alpha, & \cos(\alpha - \pi) &= - \cos \alpha.
+\end{align*}
+
+\subsubsection{关于 $y$ 轴对称}
+\[
+\sin(\pi - \alpha) = \sin \alpha, \cos(\pi - \alpha) = - \cos \alpha.
+\]
+
+\subsubsection{诱导公式与旋转}
+得到一堆诱导公式(人教 A 版总结为六大公式, 更有条理). 诱导公式将任意角转化为 $[0, 2\pi]$ 上的角进行计算.
+
+\textbf{奇变偶不变, 符号看象限} \quad 设角 $\alpha = \dfrac{n\pi}{2}\pm \alpha$. 
+
+对于正弦、余弦、正切函数, 当 $n$ 为奇数时, 函数名改变; 当 $n$ 为偶数时, 函数名不变.
+
+将 $\alpha$ 视为锐角, 结果的符号就是\textbf{原始角度}代入\textbf{原始三角函数}的符号.
+
+
+\section{正弦函数、余弦函数的图像与性质再认识}
+
+\subsection{正弦函数的图像与性质再认识}
+
+\subsubsection{正弦函数的图像}
+
+先用描点法画出 $y = \sin x$ 在区间 $[0, 2\pi]$ 上的图象, 然后再利用周期性, 通过平移得出 $y = \sin x, x \in \mathbf{R}$ 的图象.
+正弦函数 $y = \sin x, x \in \mathbf{R}$ 的图象叫做\textbf{正弦曲线}.
+
+\subsubsection{正弦函数性质的再认识}
+
+定义域、最大最小值、值域、周期性、单调性、奇偶性.
+
+比较 $\sin \theta_1$ 与 $\sin \theta_2$ 的大小, 通常先利用周期性将 $\theta_1$ 和 $\theta_2$ 转换到同一个周期里, 再通过单调性比大小.
+
+\subsubsection{五点作图法}
+
+先描出五个关键点, 再用光滑曲线将它们相连, 得到简图.
+
+\subsection{余弦函数的图像与性质再认识}
+
+\subsubsection{余弦函数的图象}
+
+余弦函数 $y = \cos x, x \in \mathbf{R}$ 的图象叫做\textbf{余弦曲线}.
+
+余弦函数的图象可以看作是由正弦函数 $y = \sin x, x \in \mathbf{R}$ 的图象像左平移 $\dfrac{\pi}{2}$ 个单位得到的.
+
+\subsubsection{余弦函数的性质再认识}
+
+定义域、最大最小值、值域、周期性、单调性、奇偶性.  
+
+求解 $y = \cos x \geqslant m, m\in \mathbf{R}$ 这类问题, 通常先将 $x$ 限定在一个周期内, 利用单调性求解, 然后再利用周期性得到在整个定义域上的解集.
+
+
+\section{函数 $y = A\sin(\omega x + \varphi)$ 的性质与图象}
+
+在实际问题中经常会遇到形如
+\[
+y = A\sin(\omega x + \varphi)
+\]
+的函数关系.
+
+\subsection{探究 $\omega$ 对 $y = \sin \omega x$ 的图象的影响}
+
+考虑函数 $y = \sin 2x, x\in \mathbf{R}$.
+
+周期性: $y = \sin 2x = \sin(2x + 2\pi) = \sin2(x + \pi)$. 可知其最小正周期为~$\pi$.
+
+图象: 利用五点作图法, 列表(如表\ref{tab: y=sin2x}).
+\begin{table}[htbp]
+    \centering
+    \caption{}\label{tab: y=sin2x}
+        \begin{tabular}{c|c|c|c|c|c}
+            \hline
+            $2x$ & 0 & $\frac{\pi}{2}$ & $\pi$ & $\frac{3\pi}{2}$ & $2\pi$ \\
+            \hline
+            $x$  & & & & & \\
+            \hline
+            $y = \sin2x$ & 0 & 1 & 0 & -1 & 0 \\
+            \hline
+        \end{tabular}
+\end{table}
+
+画出一个周期上的图象, 然后利用周期性扩展到整个定义域.
+
+经对比可以发现, 函数 $y = \sin 2x$ 的图象可以通过将 $y = \sin x$ 图象上的每个点的横坐标缩短到原来的 $\dfrac{1}{2}$, 纵坐标不变而得到.
+
+单调性、最大最小值、值域.
+
+一般地, 对于 $\omega > 0$, 有
+\[
+\sin \omega x = \sin(\omega x + 2\pi) = \sin \omega(x + \frac{2\pi}{\omega}).
+\]
+
+函数 $y = \sin \omega x$ 的最小正周期 $T = \dfrac{2\pi}{\omega}$.
+其图象是将 $y = \sin x$ 图象上所有点的横坐标缩短到原来的 $\dfrac{1}{\omega}(\omega > 1)$ 或伸长到原来的 $\dfrac{1}{\omega}(\omega < 1)$,
+纵坐标不变得到的.
+
+通常称 $\dfrac{1}{T} = \dfrac{1}{2\pi}$ 为\textbf{频率}. 频率表示单位时间内函数完成周期性变化的次数.
+
+\subsection{探究 $\varphi$ 对 $y = \sin(x + \varphi)$ 的图象的影响}
+
+函数 $y = \sin(x + \varphi)$ 与函数 $y = \sin x$ 的周期相同. 
+它的图象可以看作将 $y = \sin x$ 上的所有点向左($\varphi > 0$)或向右($\varphi$)平移 $|\varphi|$个单位长度得到的.
+
+函数 $y = \sin(\omega x + \varphi) = \sin \omega(x + \dfrac{\varphi}{\omega})$ 与函数 $y = \sin \omega x$ 周期相同.
+令 $\omega x + \varphi = 0$, 得 $x = -\dfrac{\varphi}{\omega}$, 即函数 $y = \sin \omega x$ 图象上的点 (0, 0) 
+平移到了 $(0, -\dfrac{\varphi}{\omega})$. 
+函数 $y = \sin(\omega x + \varphi)$ 的图象, 可以看作将 $y = \sin \omega x$ 的图象向左($\varphi > 0$)
+或向右($\varphi > 0$)平移 $\left |\dfrac{\varphi}{\omega}\right |$ 个单位长度得到的(注意: 此处仅考虑 $\omega > 0$ 的一般情况).
+
+在函数 $y = \sin(\omega x + \varphi)$ 中, $\varphi$ 决定了 $x = 0$ 时的函数值, 
+通常称 $\varphi$ 为\textbf{初相}, $\omega x + \varphi$ 为\textbf{相位}.
+
+\subsection{探究 $A$ 对 $y = \sin(\omega x + \varphi)$ 的图象的影响}
+
+函数 $y = A\sin(\omega x + \varphi)$ 的图象是将 $y = \sin(\omega x + \varphi)$ 图象上的所有点的纵坐标伸长($A > 0$)
+或缩短($A < 0$)到原来的 $A$ 倍, 横坐标保持不变得到的. $A$ 决定了 $y = A\sin(\omega x + \varphi)$ 的值域以及最大最小值, 
+通常称 $A$ 为\textbf{振幅}.
+
+研究函数 $y = A\sin(\omega x + \varphi)$ 的一般步骤有:
+
+(1) 确定周期 $T = \dfrac{2\pi}{\omega}$;
+
+(2) 根据五点作图法, 找到五个关键点, 画出函数在一个周期上的图象;
+
+(3) 利用周期性, 将图象延拓到整个定义域.
+
+(4) 借助图象研究函数.
+
+\section{正切函数}
+
+\subsection{正切函数的定义}
+
+比值 $\dfrac{\sin x}{\cos x}$ 是 $x$ 的函数, 称为 $x$ 的正切函数,
+记作 $y = \tan x, x\in \{x\in \mathbf{R}|x \neq \dfrac{\pi}{2}+k\pi, k\in \mathbf{Z}\}$.
+(在人教A版中直接定义两坐标比值 $\dfrac{y}{x}$ 为正切函数, 不知道哪种定义更好理解).
+
+\subsection{正切函数的诱导公式}
+
+借助正切函数的定义 $y = \tan x = \dfrac{\sin x}{\cos x}$, 其诱导公式($k \in \mathbf{Z}$):
+\begin{align*}
+    \tan(x + \pi) &= \tan x, & \tan(-x) &= -\tan x, \\
+    \tan(\pi - x) &= -\tan x, & \tan(x + \dfrac{\pi}{2}) &= -\dfrac{1}{\tan x}, \\
+    \tan(\dfrac{\pi}{2} - x) &= -\dfrac{1}{\tan x}.
+\end{align*}
+
+正切函数的最小正周期为 $T$, 它是奇函数.
+
+\subsection{正切函数的图象与性质}
+
+先在区间 $(-\dfrac{\pi}{2}, \dfrac{\pi}{2})$ 上取一些特殊点, 连线得到一个周期上的图象, 再延拓.
+正切函数的图象称作\textbf{正切曲线}. 直线 $x = \dfrac{\pi}{2}$ 称作正切曲线各支的渐进线.
+
+一式、两域、三性, 无最值.
+
+\section{三角函数的简单应用}
+
+水车模型, 单摆模型, 弹簧振子模型, 船舶航行模型.
+
+
+
+
+\end{document}

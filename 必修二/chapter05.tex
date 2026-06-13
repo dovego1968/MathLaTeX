@@ -1,0 +1,133 @@
+\documentclass[titlepage]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+
+\title{第五章~复数}
+\author{dovego}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\section{复数的概念及其几何意义}
+
+\subsection{复数的概念}
+
+像 $x^2 = -1$ 这样的方程没有实根, 于是我们引入一个新数 i, 叫做\textbf{虚数单位}, 且规定:
+(1) $\mathrm{i}^2 = -1$; (2) 实数与其进行四则运算时, 原有的加法、乘法运算律仍成立.
+
+常用 $z = a + b\mathrm{i}   (a,b \in \mathbf{R})$ 的形式来表示\textbf{复数}, 其中 $a$ 叫做\textbf{实部}, 记作 Re~$z$.
+$b$ 叫做\textbf{虚部}, 记作 Im~$z$.
+对于 $z$, 当且仅当 $b = 0$ 时为实数; 当且仅当 $a = b = 0$ 时为实数 0; 当 $a = 0$ 时叫做虚数; 当 $a = 0$ 且 $b \neq 0$ 时叫做纯虚数.
+
+复数集记作 $\mathbf{C}$.
+
+复数之间一般不能比大小, 但可以说相等或不相等. $a + b\mathrm{i} = c + d\mathrm{i}$ 当且仅当 $a = b$ 且 $c = d$.
+
+\subsection{复数的几何意义}
+
+建立\textbf{复平面}, $x$ 轴称为\textbf{实轴}, $y$ 轴称为\textbf{虚轴}. 
+对于复数 $z = a + b\mathrm{i}$, 可以用点 $Z(a,b)$ 或向量 $\overrightarrow{OZ} = (a, b)$ 来表示.
+
+向量 $\overrightarrow{OZ}$ 的模称为复数 $z = a + b\mathrm{i}$ 的\textbf{模}, 记作 $|z|$ 或 $|a + b\mathrm{i}|$.
+由向量模的定义可知 $|z| = |a + b\mathrm{i}| = \sqrt{a^2+ b^2}$. 当 $a = 0$ 时, $z$ 为实数, $|z| = |a|$. 向量的模可以比大小.
+
+实部相等, 虚部互为相反数的两个复数互为\textbf{共轭复数}, 通常用 $z$ 和 $\bar{z}$ 来表示. 实数的共轭复数是它本身. 
+在复平面内, 表示共轭复数的两个点关于实轴 $x$ 对称, 且模长相等.
+
+
+\section{复数的四则运算}
+
+\subsection{复数的加法与减法}
+
+\subsubsection{复数的加法与减法}
+
+对于 $z_1 = a + b\mathrm{i}$ 和 $z_2 = c + d\mathrm{i}$, 定义
+\[
+z_1 \pm z_2 = (a \pm b) + (c \pm d)\mathrm{i}.
+\]
+
+\subsubsection{复数加法的几何意义}
+
+两个复数相加可以看作两个向量相加.
+
+\subsection{复数的乘法与除法}
+
+\subsubsection{复数的乘法}
+
+对于 $z_1 = a + b\mathrm{i}$ 和 $z_2 = c + d\mathrm{i}$, 定义
+\[
+z_1 \cdot z_2 = (a + b\mathrm{i})(c + d\mathrm{i}) = (ac - bd) + (ad + bc)\mathrm{i}.
+\]
+
+复数乘法满足:
+\begin{enumerate}
+    \item[(1)] 结合律: $(z_1 \cdot z_2) \cdot z_3 = z_1 \cdot (z_2 \cdot z_3)$;
+    \item[(2)] 交换律: $z_1 \cdot z_2 = z_2 \cdot z_1$;
+    \item[(3)] 乘法对加法的结合律: $z_1 \cdot (z_2 + z_3) = z_1 \cdot z_2 + z_1 \cdot z_3$.
+\end{enumerate}
+
+我们定义复数的乘方 $z^n = \underbrace{z \boldsymbol{\cdot} z \boldsymbol{\cdot} \cdots \boldsymbol{\cdot} z}_{n\text{个}}.$
+正整数指数幂的运算性质在复数范围依然成立, 即对复数 $z, z_1, z_2$ 和正整数 $m, n$, 有
+\[
+z^m \cdot z^n = z^{m+n}, (z^m)^n = z^{mn}, (z_1 \cdot z_2)^n = z_1^n \cdot z_2^n.
+\]
+
+由此可得: $z \cdot \bar{z} = a^2 + b^2 = |z|^2 = |\bar{z}|^2$.
+
+\subsubsection{复数的除法}
+
+先定义复数的\textbf{倒数}. 若 $z_2 \cdot z =1$, 则称 $z$ 是 $z_2$ 的\textbf{倒数}, 记作 $z = \dfrac{1}{z_2}$.
+设 $z_2 = c + d\mathrm{i}, z = x + y\mathrm{i}$, 通过解方程可以推出 $z = \dfrac{c}{c^2+d^2} + \dfrac{d}{c^2+d^2}\mathrm{i}.$
+
+由此定义复数除法: $\dfrac{z_1}{z_2} = z_1 \cdot \dfrac{1}{z_2}.$ 因此
+\[
+\frac{z_1}{z_2} = \frac{a + b\mathrm{i}}{c + d\mathrm{i}} = (a + b\mathrm{i})\left(\frac{c}{c^2+d^2} + \frac{d}{c^2+d^2}\mathrm{i}\right)
+                = \frac{ac + bd}{c^2 + d^2} - \frac{ad - bc}{c^2 + d^2}\mathrm{i}.
+\]
+
+在实际计算中, 通常将分子分母同乘分母的共轭复数 $c - d\mathrm{i}$, 将分母``实数化'':
+\[
+\frac{a + b\mathrm{i}}{c + d\mathrm{i}} = \frac{(a + b\mathrm{i})(c - d\mathrm{i})}{(c + d\mathrm{i})(c - d\mathrm{i})}
+                                        = \frac{ac + bd}{c^2 + d^2} - \frac{ad - bc}{c^2 + d^2}\mathrm{i}.
+\]
+
+\subsection{复数乘法几何意义初探}
+
+设 $z_1 = a + b\mathrm{i}$ 所对应向量为 $\overrightarrow{OZ_1}$.
+
+若 $z_2 = (a + b\mathrm{i}) \cdot c(c > 0)$, 则 $\overrightarrow{OZ_2}$ 是将 $\overrightarrow{OZ_1}$ 沿原方向伸长(缩短) $c$ 倍得到的.
+
+若 $z_3 = (a + b\mathrm{i}) \cdot \mathrm{i}$, 则 $\overrightarrow{OZ_3}$ 是将 $\overrightarrow{OZ_1}$ 逆时针旋转 $\dfrac{\pi}{2}$ 得到的.
+
+
+\section{复数的三角表示}
+
+\subsection{复数的三角表示式}
+
+以 $x$ 轴为始边, $\overrightarrow{OZ}$ 所在的射线为终边的角 $\theta$ 称为复数 $z$ 的\textbf{辐角}.
+复数 0 的辐角是任意的.
+
+复数 $z = a + b\mathrm{i} = r(\cos \theta + \mathrm{i}\sin \theta)$, 其中 $r = \sqrt{a^2 + b^2}$. 
+前者为\textbf{代数表示式(代数形式)}, 后者为\textbf{三角表示式(三角形式)}.
+
+将满足 $0 \leqslant \theta < 2\pi$ 的辐角值称为\textbf{辐角的主值}, 记作 $\arg z$. 
+两个非零复数相等当且仅当它们的\textbf{模和辐角的主值}分别相等.
+
+\subsection{复数乘除运算的几何意义}
+
+设 $z_1 = r_1(\cos \theta_1 + \mathrm{i}\sin \theta_1), z_2 = r_2(\cos \theta_2 + \sin \theta_2)$. 则
+\begin{align*}
+z_1 \cdot z_2 &= r_1r_2[\cos(\theta_1 + \theta_2) + \mathrm{i}\sin(\theta_1 + \theta_2)], \\
+\dfrac{z_1}{z_2} &= \dfrac{z_1}{z_2}[\cos(\theta_1 - \theta_2) + \mathrm{i}\sin(\theta_1 - \theta_2)].
+\end{align*}
+
+乘法相当于先将 $\overrightarrow{OZ_1}$ 逆时针旋转角 $\theta_2$, 再将模长变为原来的 $r_2$ 倍.
+
+
+
+
+\end{document}

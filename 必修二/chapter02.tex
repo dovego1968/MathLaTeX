@@ -1,0 +1,261 @@
+\documentclass[titlepage]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\renewcommand\parallel{\mathrel{/\mskip-2.5mu/}}
+
+\title{第二章~平面向量及其应用}
+\author{dovego}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{从位移、速度、力到向量}
+
+\subsection{位移、速度、力与向量的概念}
+既有大小又有方向的量统称为\textbf{向量}.
+
+既有大小又有方向的线段称为\textbf{有向线段}, 记作 $\overrightarrow{AB}$.
+线段 $AB$ 的长度称为有向线段 $\overrightarrow{AB}$ 的长度, 表示向量的大小, 记作 $|\overrightarrow{AB}|$.
+向量的大小又称作向量的\textbf{模}.
+
+长度为 0 的向量称为\textbf{零向量}, 记作 $\vec{0}$. 零向量的方向是任意的.
+
+模长为 1 个单位长度的向量称为\textbf{单位向量}.
+
+\subsection{向量的基本关系}
+
+相等向量: 两个向量的大小相等且方向相同. 记作 $\boldsymbol{a} = \boldsymbol{b}$.
+
+共线向量(平行向量): 方向相同或者相反的向量. 记作 $\boldsymbol{a} \parallel \boldsymbol{b}$. 
+
+相反向量: 两个向量大小相同、方向相反. 记作 $-\boldsymbol{a}$.
+
+规定\textbf{零向量与任一向量共线}. 零向量的相反向量仍是零向量.
+
+向量的夹角: 将两个向量移至同一起点, 所构成的夹角 $\theta(0 \leqslant \theta \leqslant 180^\circ)$ 称为向量 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角.
+
+当 $\theta = 0^\circ$ 时, $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 同向, 当 $\theta = 180^\circ$ 时, 反向.
+当 $\theta = 90^\circ$ 时, \textbf{垂直}, 记作 $\boldsymbol{a} \perp \boldsymbol{b}$.
+
+规定\textbf{零向量与任一向量垂直}. 
+
+
+\section{从位移的合成到向量的加减法}
+
+\textbf{向量的加法}满足\textbf{三角形法则}和\textbf{平行四边形法则}.
+
+向量的加法满足交换律和结合律, 即
+\begin{align*}
+    \boldsymbol{a} + \boldsymbol{b} &= \boldsymbol{b} + \boldsymbol{a}, \\
+    (\boldsymbol{a} + \boldsymbol{b}) + \boldsymbol{c} &= \boldsymbol{a} + (\boldsymbol{b} + \boldsymbol{c}).
+\end{align*}
+
+\textbf{向量的减法}定义为: $\boldsymbol{a} - \boldsymbol{b} = \boldsymbol{a} + (-\boldsymbol{b})$.
+
+
+\section{从速度的倍数到向量的数乘}
+
+\subsection{数乘运算的定义}
+
+\textbf{向量的数乘}: 实数 $\lambda$ 与向量 $\boldsymbol{a}$ 的乘积是一个向量, 记作 $\lambda \boldsymbol{a}$, 满足以下条件
+
+(1) 当 $\lambda > 0$ 时, 向量 $\lambda \boldsymbol{a}$ 与向量 $\boldsymbol{a}$ 方向相同; 当 $\lambda < 0$ 时, 方向相反; 
+当 $\lambda = 0$ 时, $0\boldsymbol{a} = \boldsymbol{0}$.
+
+(2) $|\lambda \boldsymbol{a}| = |\lambda||\boldsymbol{a}|$.
+
+向量的单位化: 设 $\boldsymbol{a}$ 为非零向量, 则它在 $\boldsymbol{a}$ 方向上的单位向量为 $\dfrac{\boldsymbol{a}}{|\boldsymbol{a}|}$.
+
+\subsection{数乘运算的运算律}
+
+设 $\lambda, \mu$ 为实数, $\boldsymbol{a}, \boldsymbol{b}$ 为向量, 根据向量数乘的定义, 可以得到以下运算律:
+\begin{align*}
+    (\lambda + \mu)\boldsymbol{a} &= \lambda \boldsymbol{a} + \mu \boldsymbol{a}, \\
+    \lambda (\mu \boldsymbol{a}) &= (\lambda \mu)\boldsymbol{a}, \\
+    \lambda(\boldsymbol{a} + \boldsymbol{b}) &= \lambda \boldsymbol{a} + \lambda \boldsymbol{b}.
+\end{align*}
+
+向量的加法、减法和数乘的综合运算, 称为向量的\textbf{线性运算(或线性组合)}. 
+若向量 $\boldsymbol{c}$ 可以由向量 $\boldsymbol{a}, \boldsymbol{b}$ 线性运算得到,
+则称向量 $\boldsymbol{c}$ 可以用向量 $\boldsymbol{a}, \boldsymbol{b}$ 线性表示.
+
+\subsection{向量的数乘与向量共线的关系}
+
+\textbf{共线(平行)向量基本定理} \quad 给定一个非零向量 $\boldsymbol{b}$, 则对任意向量 $\boldsymbol{a}$,
+$\boldsymbol{a} \parallel \boldsymbol{b}$ 的充要条件是存在唯一一个实数 $\lambda$, 使得 $\boldsymbol{a} = \lambda \boldsymbol{b}$.
+
+通常可以用 $\overrightarrow{AP} = t\overrightarrow{AB}$ 表示过点 $A, B$ 的直线 $l$, 其中 $\overrightarrow{AB}$ 称为直线 $l$ 的\textbf{方向向量}.
+
+
+\section{平面向量基本定理及坐标表示}
+
+\subsection{平面向量基本定理}
+
+\textbf{平面向量基本定理} \quad 如果 $\boldsymbol{e}_1, \boldsymbol{e}_2$ 是同一平面内两个不共线的向量, 那么对平面内任意一个向量 $\boldsymbol{a}$,
+存在唯一一对实数 $\lambda_1, \lambda_2$, 使
+\[
+\boldsymbol{a} = \lambda_1 \boldsymbol{e}_1 + \lambda_2 \boldsymbol{e}_2.
+\]
+
+把不共线的向量 $\boldsymbol{e}_1, \boldsymbol{e}_2$ 叫做表示这一平面向量的一组\textbf{基}, 记作 $\{\boldsymbol{e}_1, \boldsymbol{e}_2\}$.
+
+\textbf{正交基}: 基中的两个向量互相垂直.
+
+\textbf{正交分解}: 在正交基下向量的线性表示.
+
+\textbf{标准正交基}: 两个互相垂直的单位向量组成的基.
+
+\subsection{平面向量及运算的坐标表示}
+
+\subsubsection{平面向量的坐标表示}
+
+在平面直角坐标系中, 取与 $x, y$ 轴方向分别相同的单位向量 $\boldsymbol{i}, \boldsymbol{j}$ 作为单位正交基. 
+则对于平面内的任意向量 $\boldsymbol{a}$, 以坐标原点 $O$ 为起点作 $\overrightarrow{OP} = \boldsymbol{a}$.
+由平面向量基本定理可知, 有且仅有一对实数 $x, y$, 使 $\overrightarrow{OP} = x\boldsymbol{i} + y\boldsymbol{j}$.
+因此 $\boldsymbol{a} = x\boldsymbol{i} + y\boldsymbol{j}$. 
+我们把 $(x, y)$ 称为向量 $\boldsymbol{a}$ 在标准正交基 $\{\boldsymbol{i}, \boldsymbol{j}\}$ 下的坐标, 可以表示为 $\boldsymbol{a} = (x, y)$.
+
+\subsection{平面向量运算的坐标表示}
+
+根据向量的运算律, 可得:
+\begin{align*}
+    \boldsymbol{a} \pm \boldsymbol{b} &= (x_1 \pm x_2, y_1 \pm y_2), \\
+    \lambda \boldsymbol{a} &= (\lambda x_1, \lambda y_1).
+\end{align*}
+
+设 $A(x_1, y_2), B(x_2, y_2)$. 则
+\[
+\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = (x_2 - x_1, y_2 - y_1).
+\]
+
+\textbf{中点坐标公式}: 若点 $A(x_1, y_1), B(x_2, y_2), M$ 为线段 $AB$ 的中点,
+则 $M$ 的坐标为 $\left(\dfrac{x_1 + x_2}{2}, \dfrac{y_1 + y_2}{2}\right)$. 
+
+\subsubsection{平面向量平行的坐标表示}
+
+由平面向量基本定理知, 向量 $\boldsymbol{a}, \boldsymbol{b}$ 共线的充要条件是 $x_1y_2 - x_2y_1 = 0$.
+
+
+\section{从力的做功到向量的数量积}
+
+\subsection{向量的数量积}
+
+\subsubsection{向量的数量积的定义}
+将 $|\boldsymbol{a}||\boldsymbol{b}|\cos \theta$ 称为非零向量 $\boldsymbol{a}$ 与非零向量 $\boldsymbol{b}$ 的\textbf{数量积}(或\textbf{内积}), 
+记作 $\boldsymbol{a \cdot \boldsymbol{b}}$, 即
+\[
+\boldsymbol{a \cdot b} = |\boldsymbol{a}| |\boldsymbol{b}| \cos \langle \boldsymbol{a}, \boldsymbol{b} \rangle 
+                       = |\boldsymbol{a}| |\boldsymbol{b}| \cos \theta.
+\]
+
+规定\textbf{零向量与任一向量的数量积为 0}.
+
+\subsubsection{投影向量和投影数量}
+
+\textbf{投影向量}: 称 $\gamma$ 为非零向量 $\boldsymbol{a}$ 在非零向量 $\boldsymbol{b}$ 上的投影向量.
+
+\textbf{投影数量}: 投影向量 $\gamma$ 的数量 $|\boldsymbol{a}||\boldsymbol{b}|\cos \langle \boldsymbol{a}, \boldsymbol{b} \rangle$
+也成为向量 $\boldsymbol{a}$ 在向量 $|\boldsymbol{b}|$ 方向上的投影数量, 可以表示为 $\boldsymbol{a \cdot} \dfrac{\boldsymbol{b}}{|\boldsymbol{b}|}$.
+
+数量积 $\boldsymbol{a \cdot b}$ 的几何意义可以由图得出.
+
+\subsection{数量积的运算性质}
+
+\subsubsection{数量积的运算律}
+
+对任意向量 $\boldsymbol{a, b, c}$ 和实数 $\lambda$:
+
+(1) 交换律: $\boldsymbol{a \cdot b} = \boldsymbol{b \cdot a}$;
+
+(2) 与数乘的结合律: $\lambda(\boldsymbol{a \cdot b}) = (\lambda \boldsymbol{\cdot a}) \boldsymbol{b}$;
+
+(3) 关于加法的分配律: $(\boldsymbol{a} + \boldsymbol{b}) \boldsymbol{\cdot c} = \boldsymbol{a \cdot c} + \boldsymbol{b \cdot c}$.
+
+\subsubsection{数量积的性质}
+
+(1) 若 $\boldsymbol{e}$ 是单位向量, 则 $\boldsymbol{a \cdot e} = \boldsymbol{e \cdot a} = |\boldsymbol{a}|\cos \langle \boldsymbol{a, e} \rangle$;
+
+(2) 若 $\boldsymbol{a, b}$ 是非零向量, 则 $\boldsymbol{a \cdot b} = 0 \Leftrightarrow \boldsymbol{a} \perp \boldsymbol{b}$;
+
+(3) $\boldsymbol{a}^2 = \boldsymbol{a \cdot a} = |\boldsymbol{a}|^2$, 即 $|\boldsymbol{a}| = \sqrt{\boldsymbol{a \cdot a}}$;
+
+(4) $\cos \langle \boldsymbol{a, b} \rangle = \dfrac{\boldsymbol{a \cdot b}}{|\boldsymbol{a}||\boldsymbol{b}|}(|\boldsymbol{a}||\boldsymbol{b}|\neq 0)$;
+
+(5) $|\boldsymbol{a \cdot b}| \leq |\boldsymbol{a}||\boldsymbol{b}|$, 当且仅当 $\boldsymbol{a} \parallel \boldsymbol{b}$ 时等号成立.
+
+\subsection{向量数量积的坐标表示}
+
+在平面直角坐标系中
+\[
+\boldsymbol{a \cdot b} = x_1x_2 + y_1y_2.
+\]
+
+由此可得:
+
+(1) 设 $\boldsymbol{a} = (x, y)$, 则 $|\boldsymbol{a}|^2 = x^2 + y^2$, 即 $|\boldsymbol{a}| = \sqrt{x^2 + y^2}$.
+
+若 $A(x_1, y_1), B(x_2, y_2)$, 则 $|\overrightarrow{AB}| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.
+这就是\textbf{两点间的距离公式}.
+
+(2) 夹角余弦值为
+\[
+\cos \theta = \dfrac{\boldsymbol{a \cdot b}}{|\boldsymbol{a}||\boldsymbol{b}|} 
+            = \dfrac{x_1x_2 + y_1y_2}{\sqrt{x_1^2+y_1^2}\boldsymbol{\cdot}\sqrt{x_2^2+y_2^2}},
+            (|\boldsymbol{a}||\boldsymbol{b}|\neq 0).
+\]
+
+特别地, $\boldsymbol{a} \perp \boldsymbol{b} \Leftrightarrow x_1x_2 + y_1y_2 = 0.$
+
+\textbf{例 4}给出了点到直线的距离公式. 设 $P$ 是直线 $AB$ 外一点, $\boldsymbol{n} \perp \overrightarrow{AB}$,
+则点 $P$ 到直线 $AB$ 的距离为 $d = \left|\overrightarrow{AP} \boldsymbol{\cdot} \dfrac{\boldsymbol{n}}{|\boldsymbol{n}|}\right|$.
+
+\subsection{利用数量积计算长度和角度}
+
+\textbf{例 6}证明了平行四边形两条对角线的平方和等于四条边的平方和.
+
+利用数量积得出余弦值, 从而判断三角形的类型.
+
+
+\section{平面向量的应用}
+
+\subsection{余弦定理与正弦定理}
+
+\subsubsection{余弦定理}
+
+在三角形 $ABC$ 中, 由 $\overrightarrow{BC}^2 = (\overrightarrow{AC} - \overrightarrow{AB})^2$ 得
+\[
+a^2 = b^2 + c^2 - 2bc\cos A.
+\]
+
+余弦定理是勾股定理的推广.
+
+在已知三角形三边的情况下, 可以求出任意内角的余弦值.
+
+\subsubsection{正弦定理}
+
+作垂线, 可以推出
+\[
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R(R\text{为外接圆半径}).
+\]
+
+画出外接圆, 利用圆周角是圆心角的一半, 可以推出 $R\sin \theta = \dfrac{a}{2}$.
+
+三角形的面积 $S = \dfrac{1}{2}bc\sin A = \dfrac{1}{2}ac\sin B = \dfrac{1}{2}ab\sin C$.
+
+\subsubsection{用余弦、正弦定理解三角形}
+
+在三角形的六个元素中, 若已知 3 个元素(且至少含一边), 则可以求出其余 3 个元素.
+
+注意, 在已知两边及其中一边对角的情况下, 需要判断两解、一解还是无解.
+
+\subsection{平面向量在几何、物理中的应用举例}
+
+在几何问题中, 通常可以先选定一组基, 然后再将其余向量用这组基来表示.
+
+\textbf{例 20}解释了合力所做功等于各分力所作功的代数和.
+
+
+\end{document}

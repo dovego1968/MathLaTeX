@@ -1,0 +1,99 @@
+\documentclass[titlepage]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{第四章~三角恒等变换}
+\author{dovego}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\section{同角三角函数的基本关系}
+
+在单位圆中, 容易得出 $\sin^2 \theta + \cos^2 \theta = 1$.
+再结合 $\tan \theta = \dfrac{\sin \theta}{\cos \theta}$,
+当已知角 $\theta$ 的一个三角函数值时, 可以求出其余两个三角函数值(有时需分类讨论判断正负).
+
+已知 $\tan \theta$ 的值时, 对齐次分式化简求值, 可先将 $\sin \theta, \cos \theta$ 转化为 $\tan \theta$, 再进行计算.
+若分式不是齐次的, 则可以分别求出 $\sin \theta, \cos \theta$ 的值(有时需分类讨论), 再代入计算.
+
+常用公式还有 $\tan^2 \theta + 1 = \dfrac{1}{\cos^2 \theta}$.
+
+
+\section{两角和与差的三角函数公式}
+
+\subsection{两角和差公式及其应用(合)}
+在单位圆中利用向量的数量积, 可得
+\begin{align*}
+C_{\alpha + \beta} &= \cos \alpha \cos \beta - \sin \alpha \sin \beta, \\
+C_{\alpha - \beta} &= \cos \alpha \cos \beta - \sin \alpha \sin \beta, \\
+S_{\alpha + \beta} &= \sin \alpha \cos \beta + \cos \alpha \sin \beta, \\
+S_{\alpha - \beta} &= \sin \alpha \cos \beta - \cos \alpha \sin \beta, \\
+T_{\alpha + \beta} &= \dfrac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta}, \\
+T_{\alpha - \beta} &= \dfrac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}.
+\end{align*}
+
+一般地, 当 $a, b$ 不同时为 0 时, 
+\[
+a\sin \alpha + b\cos \alpha = \sqrt{a^2 + b^2}(\frac{a}{\sqrt{a^2 + b^2}}\sin \alpha 
+                                    + \frac{b}{\sqrt{a^2 + b^2}}\cos \alpha).
+\]
+
+引入辅助角 $\varphi$, 使得
+\[
+\sin \varphi = \frac{b}{\sqrt{a^2 + b^2}}, \cos \varphi = \frac{a}{\sqrt{a^2 + b^2}},
+\tan \varphi = \frac{b}{a}.
+\]
+
+所以 $a\sin \alpha + b\cos \alpha = \sqrt{a^2 + b^2}\sin(\alpha + \varphi).$
+
+利用上述方法, 可以将某些三角函数式化简为 $A\sin(\alpha + \varphi)$ 的形式, 以利于研究其性质和图象.
+
+\subsection{积化和差与和差化积公式}
+
+积化和差:
+\begin{align*}
+    \sin \alpha \cos \beta &= \dfrac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)], \\
+    \cos \alpha \sin \beta &= \dfrac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)], \\
+    \sin \alpha \sin \beta &= -\dfrac{1}{2}[\cos(\alpha + \beta) - \cos(\alpha - \beta)], \\
+    \cos \alpha \cos \beta &= \dfrac{1}{2}[\cos(\alpha + \beta) + \cos(\alpha - \beta)].
+\end{align*}
+
+和差化积:
+
+令 $\alpha + \beta = x, \alpha - \beta = y$, 则 $\alpha = \dfrac{x + y}{2}, \beta = \dfrac{x - y}{2}$, 得
+\begin{align*}
+    \sin x + \cos y &= 2\sin \dfrac{x + y}{2} \cos \dfrac{x - y}{2}, \\
+    \sin x - \cos y &= 2\cos \dfrac{x + y}{2} \sin \dfrac{x - y}{2}, \\
+    \cos x + \cos y &= 2\cos \dfrac{x + y}{2} \cos \dfrac{x - y}{2}, \\
+    \cos x - \cos y &= -2\sin \dfrac{x + y}{2} \sin \dfrac{x - y}{2}.
+\end{align*}
+
+
+\section{二倍角的三角函数公式}
+
+\subsection{二倍角公式}
+
+利用两角和公式, 得
+\begin{align*}
+    S_{2\alpha} &= 2\sin \alpha \cos \alpha, \\
+    C_{2\alpha} &= \cos^2 \alpha - \sin^2 \alpha \\
+                &= 2\cos^2 \alpha - 1 \\
+                &= 1 - 2\sin^2 \alpha, \\
+    T_{2\alpha} &= \dfrac{2\tan \alpha}{1 - \tan^2 \alpha}.
+\end{align*}
+
+\subsection{半角公式}
+
+\begin{align*}
+    \sin \dfrac{\alpha}{2} &= \pm \sqrt{\dfrac{1 - \cos \alpha}{2}}, \\
+    \cos \dfrac{\alpha}{2} &= \pm \sqrt{\dfrac{1 + \cos \alpha}{2}}, \\
+    \tan \dfrac{\alpha}{2} &= \pm \sqrt{\dfrac{1 - \cos \alpha}{1 + \cos \alpha}} \\
+                           &= \dfrac{\sin \alpha}{1 + \cos \alpha} \\
+                           &= \dfrac{1 - \cos \alpha}{\sin \alpha}.
+\end{align*}
+
+\end{document}
